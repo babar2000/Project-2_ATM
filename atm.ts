@@ -39,7 +39,7 @@ const answers = await inquirer.prompt([{
     type: "number",
     name: "Amount",
     message: "Please enter your Ammount",
-    when(answers) {
+    when(answers: { transactionType: string; }) {
         return answers.transactionType == "withdrawCash"
     }
 },
